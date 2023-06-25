@@ -1,0 +1,62 @@
+.whatsNew-section {
+    width: 100%;
+    padding-top: 0%;
+    padding-bottom: 5%;
+}
+
+.whatsNew-container {
+    /* border: 1px solid black; */
+    width: 90%;
+    margin: auto;
+}
+
+.whatsNew-text {
+    font-size: 30px;
+    font-family: 'Koulen';
+    margin: 0;
+}
+
+.coffeeCatchers-io-text {
+    font-size: 15px;
+    font-family: 'Noto Music';
+    text-align: end;
+    margin: 0;
+}
+
+.whatsNew-image-container {
+    /* border: 1px solid red; */
+    width: 100%;  
+    display: flex;
+    justify-content: space-between;
+}
+
+.whatsNew-image-division {
+    /* border: 1px solid black; */
+    width: 45%;
+}
+
+.whatsNew-image-block {
+    overflow: hidden;
+    width: 100%;
+    height: 90%;
+}
+
+.whatsNew-image-block img {
+    transition: .5s;
+}
+
+.whatsNew-image-block:hover img {
+    transform: scale(1.05);
+}
+
+.whatsNew-image-division span {
+    text-align: center;
+    display: block;
+    font-family: 'Koulen';
+    font-size: 20px;
+}
+
+
+
+
+

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+        <link rel="icon" type="image/x-icon" href="Resources/IMAGES/logo_ico.ico">
+        <link rel="stylesheet" href="HOME.css">
+        <link rel="stylesheet" href="Best-Selling-Slides.css">
+        <link rel="stylesheet" href="What-is-New.css">
+        <link rel="stylesheet" href="Side-Navigation-Menu.css">
+        <link rel="stylesheet" href="PopUp-Purchase.css">
+        <link rel="stylesheet" href="Menu-Board.css">
+        <link rel="stylesheet" href="Checkout_Preview.css">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,300italic,regular,italic,500,500italic,600,600italic,700,700italic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Arimo:regular,500,600,700,italic,500italic,600italic,700italic" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Koulen:regular" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Music:regular" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Kreon:300,regular,500,600,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Flamenco:300,regular" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>COFFEE SHOP</title>
+    </head>
+
+    <body>
+
+        <!-- <div class="randomAds">
+
+        </div> -->
+        
+        <div class="side-nav-menu" id="sideNavMenu">
+            <nav class="side-nav-options">
+                <a href="javascript:void(0)" style="height: 10%;"><i class="material-icons" id="sideNavBar_close" onclick="hideNav()">&#xe5cd;</i></a>
+                <a href="#" class="nav-btn">DISCOUNTS</a>
+                <a href="#" class="nav-btn">WORKSPACE</a>
+                <a href="#" class="nav-btn">RATINGS</a>
+                <a href="#" class="nav-btn">ABOUT US</a>
+            </nav>
+        </div>
+
+
+
+
+
+
+
+        <!-- POP UP -->
+        <form action="placedOrder.php" method="POST" class="pop-up-Purchase" id="PopUp_Purchase">
+            <div class="popUp-header">
+                <p>CHECKOUT</p>
+                <a href="javascript:void(0)"><i class="material-icons" onclick="hide_Purchases()">&#xe5cd;</i></a>
+            </div>
+
+            <div class="order-selection">
+                <div class="order-code">
+                    <select onchange="showOrderDetails()" id="orderCode">
+                        <option></option>
+                        <option>C1</option>
+                        <option>C2</option>
+                        <option>C3</option>
+                        <option>C4</option>
+                        <option>C5</option>
+                        <option>C6</option>
+                        <option>C7</option>
+                        <option>C8</option>
+                        <option>C9</option>
+                    </select>
+                </div>
+
+                <div class="orderName-orderSize">
+                    <label class="orderName" id="orderName"></label>
+
+                    <div class="orderSize-container">
+                        <input type="radio" id="small" class="orderSize" name="orderSize">
+                        <label for="small" class="order-size">SMALL</label><br>
+
+                        <input type="radio" id="medium" class="orderSize"  name="orderSize">
+                        <label for="medium" class="order-size">MEDIUM</label><br>
+
+                        <input type="radio" id="large" class="orderSize"  name="orderSize">
+                        <label for="large" class="order-size">LARGE</label>
+                    </div>
+                </div>
+
+                <div class="orderImage-Quantity">
+                    <img src="Resources/IMAGES/popUp-img-preview.png" id="orderImage">
+                    <nav>
+                        <input type="button" id="decrease" value="-" onclick="dec()" disabled>
+                        <input type="button" id="quantity" value="1">
+                        <input type="button" id="increase" value="+" onclick="inc()" disabled>
+                    </nav>
+                </div>
+            </div>
+
+            <hr style="width: 90%; ">
+            <div class="order-Checkout-Details">
+                <div class="order-checkout">
+                    <label class="checkout-Labels">UNIT PRICE: </label>    <label class="checkout-Cost" id="checkout_UnitPrice">0</label>
+                </div>
+                
+                <div class="order-checkout">
+                    <label class="checkout-Labels">QUANTITY: </label>    <label class="checkout-Cost" id="checkout_Quantity">1</label>
+                </div>
+
+                <div class="order-checkout">
+                    <label class="checkout-Labels">TOTAL: </label>    <label class="checkout-Cost" id="checkout_Total">0</label>
+                </div>
+
+                <br>
+                <div class="order-checkout">
+                    <label class="checkout-Labels">PAYMENT: </label>
+                    <select class="checkout-Option">
+                        <option style="color: black;">Cash on Delivery</option>
+                        <option style="color: black;">Gcash QR Code</option>
+                    </select>
+                </div>
+
+                <div class="order-checkout">
+                    <label class="checkout-Labels">SHIPPING: </label><br>
+                    <select class="checkout-Option">
+                        <option style="color: black;">Standard Local - 50.00</option>
+                        <option style="color: black;">Drive Special XY - 150.00</option>
+                    </select>
+                </div>
+
+                <div class="order-checkout">
+                    <label class="checkout-Labels">CONTACT #: </label><br>
+                    <input class="checkout-Option contact">
+                </div>
+
+                <div class="order-checkout" style="display: block;">
+                    <label class="checkout-Labels">FULL ADDRESS: </label>
+                    <input class="checkout-Option address" placeholder="Street No./ Village / Town / Province">
+                </div>
+                
+                <input type="button" class="checkoutPreview-btn" onclick="checkoutPreview()" value="PREVIEW ORDER">
+            </div>
+
+            <div class="checkoutPreview" id="checkoutPreview">
+                <label for="order_Address">DELIVERY ADDRESS:</label>
+                <textarea type="text" id="order_Address" name="order_Address" readonly></textarea>
+                <hr class="hr">
+                <div class="checkoutPreview-img-name-quantity-variation">
+                    <div class="checkoutPreview-image-division">
+                        <img src="/Resources/BEVERAGES/ColeCo. Specialty Coffee Latte.jpg" height="100%" width="100%">
+                    </div>
+                    <div class="checkoutPreview-name-quantity-variation-division">
+                        <input class="checkoutPreview-name" value="ColeCo. Specialty Coffee Latte">
+                        <div class="checkoutPreview-variation-quantity">
+                            <label class="var-label">Variation:</label>
+                            <div class="checkout-var">SMALL</div>
+                            <div class="checkout-quant">x29</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br><br>
+                <!-- <input type="submit" value="PLACE ORDER"> -->
+            </div>
+        </form>
+
+
+
+        <div class="home-container">
+            <!-- HEADER -->
+            <header>
+                    <img src="Resources/IMAGES/logo.png" width="40" height="40">
+                    <p class="shop-name">COFFEE CATCHERS</p>
+                    <i class="fa side-nav-bar" id="sideNavBar_open" style="font-size: 30px;" onclick="showNav()">&#xf0c9;</i>
+            </header>
+                
+            <!-- CONTENT -->
+    
+            <div class="body-container">
+                <!-- BEST SELLING T-->
+                <div class="best-selling-slides">
+                    <div class="product-container">
+                        <div class="image-text-container">
+                            <div class="image-container">
+                                <img src="#" width="100%" height="100%" class="bs-product-image">
+                            </div>
+                            <div class="text-container">
+                                <div class="best-selling-text"></div>
+                                <div class="best-selling-price">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-container">
+                        <div class="image-text-container">
+                            <div class="image-container">
+                                <img src="#" width="100%" height="100%" class="bs-product-image">
+                            </div>
+                            <div class="text-container">
+                                <div class="best-selling-text"></div>
+                                <div class="best-selling-price">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-container">
+                        <div class="image-text-container">
+                            <div class="image-container">
+                                <img src="#" width="100%" height="100%" class="bs-product-image">
+                            </div>
+                            <div class="text-container">
+                                <div class="best-selling-text"></div>
+                                <div class="best-selling-price">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-container">
+                        <div class="image-text-container">
+                            <div class="image-container">
+                                <img src="#" width="100%" height="100%" class="bs-product-image">
+                            </div>
+                            <div class="text-container">
+                                <div class="best-selling-text"></div>
+                                <div class="best-selling-price">
+                                 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-container">
+                        <div class="image-text-container">
+                            <div class="image-container">
+                                <img src="#" width="100%" height="100%" class="bs-product-image">
+                            </div>
+                            <div class="text-container">
+                                <div class="best-selling-text"></div>
+                                <div class="best-selling-price">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-container">
+                        <div class="image-text-container">
+                            <div class="image-container">
+                                <img src="#" width="100%" height="100%" class="bs-product-image">
+                            </div>
+                            <div class="text-container">
+                                <div class="best-selling-text"></div>
+                                <div class="best-selling-price">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- MENU - BUY NOW - BUTTON -->
+                <!-- OPEN HOURS TIME BOARD -->
+    
+                <div class="buttons-timeBoard-container">
+                    <div class="menu-buyNow-buttons">
+                        <button class="btn"><a class="menu" href="#menu-container">MENU</a></button>
+                        <button class="btn buyNow" onclick="show_Purchase()">BUY NOW!</button>
+                    </div>
+        
+                    <div class="time-board-container">
+                        <p style="font-size: 20px;">OPEN HOURS</p>
+                        <p style="margin-top: 20px; font-size: 13px;">
+                            MONDAY - FRIDAY <br>
+                            <span style="font-size: 20px;">
+                                8AM - 11PM
+                            </span>
+                        </p>
+                        
+                        <p style="margin-top: 20px; font-size: 13px;">
+                            SATURDAY - SUNDAY <br>
+                            <span style="font-size: 20px;">
+                                7AM - 10PM
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- MENU -->
+
+            <div class="menu-container" id="menu-container">
+                <div class="menu-btn-navigation">
+                    <nav>
+                        <a href="#" class="menu-nav-btn active">COFFEE</a>
+                        <a href="#" class="menu-nav-btn">FOOD</a>
+                        <a href="#" class="menu-nav-btn">MERCH</a>
+                    </nav>
+                </div>
+
+                <div class="menu-product-list-container">
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image">
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C1. Tuesday Bake Latte</div>
+                                <div class="product-price">
+                                    S - P 119.00<br>
+                                    M - P 139.00<br>
+                                    L - P 159.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image" >
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C2. Cafe Whitney Latte</div>
+                                <div class="product-price">
+                                    S - P 109.00<br>
+                                    M - P 119.00<br>
+                                    L - P 129.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image">
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C3. ColeCo. Specialty Coffee Latte</div>
+                                <div class="product-price">
+                                    S - P 119.00<br>
+                                    M - P 129.00<br>
+                                    L - P 139.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image">
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C4. Decouverte Latte</div>
+                                <div class="product-price">
+                                    S - P 129.00<br>
+                                    M - P 139.00<br>
+                                    L - P 149.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image">
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C5. The Curator Espresso with Milk</div>
+                                <div class="product-price">
+                                    S - P 099.00<br>
+                                    M - P 109.00<br>
+                                    L - P 119.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image">
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C6. Prominent MNL Latte</div>
+                                <div class="product-price">
+                                    S - P 119.00<br>
+                                    M - P 139.00<br>
+                                    L - P 159.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image">
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C7. Cafe Seventy Six Whole Milk Latte</div>
+                                <div class="product-price">
+                                    S - P 109.00<br>
+                                    M - P 119.00<br>
+                                    L - P 129.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image">
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C8. Bottled Ice White</div>
+                                <div class="product-price">
+                                    S - P 139.00<br>
+                                    M - P 149.00<br>
+                                    L - P 159.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-product-container">
+                        <div class="menu-image-text-container">
+                            <div class="menu-image-container">
+                                <img src="#" width="100%" height="100%" class="menu-product-image">
+                            </div>
+                            <div class="menu-text-container">
+                                <div class="product-text">C9. Arabica Iced Caffe Latte</div>
+                                <div class="product-price">
+                                    S - P 099.00<br>
+                                    M - P 109.00<br>
+                                    L - P 119.00
+                                </div>
+                                <a class="menu-BuyNow">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            
+    
+            <!-- WHAT'S NEW -->
+    
+            <div class="whatsNew-section">
+                <div class="whatsNew-container">
+                    <hr style="border: 1px solid black;"><br>
+                    <p class="whatsNew-text">WHAT'S NEW?</p>
+                    <p class="coffeeCatchers-io-text">COFFEE CATCHERS.IO</p>
+                    <div class="whatsNew-image-container">
+                        <div class="whatsNew-image-division">
+                            <div class="whatsNew-image-block">
+                                <a target="_parent" href="Resources/BEVERAGES/newCoffee.jpg">
+                                    <img src="Resources/BEVERAGES/newCoffee.jpg" width="100%" height="100%">
+                                </a>
+                            </div>
+                            <span>DECOUVERTE LATTE</span>
+                        </div>
+                        <div class="whatsNew-image-division">
+                            <div class="whatsNew-image-block">
+                                <a target="_parent" href="Resources/BREAD/newBread.png">
+                                    <img src="Resources/BREAD/newBread.png" width="100%" height="100%">
+                                </a>
+                            </div>
+                            <span>PITA LOAF BREAD</span>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+    
+            <footer>
+                <div class="footer-text">
+                    <div style=" width: 72%; height: 25%; display: flex; margin: auto; align-items: center; ">
+                        Copyright © 2022 Coffee Catchers, Inc. All rights reserved
+                    </div>
+                    <nav class="footer-nav">
+                        <a href="#">PRODUCTS</a>
+                        <a href="#">BRANCH NEARBY</a>
+                        <a href="#">SERVICES</a>
+                        <a href="#">WORKSPACE</a>
+                        <a href="#">CONTACT US</a>
+                        <a href="#">BACK TO THE TOP</a>
+                    </nav>
+                </div>
+    
+                <div class="footer-image"></div>
+            </footer>
+        </div>  
+    </body>
+
+    <script src="Side_Navigation_Menu.js"></script>
+    <script src="Best_Selling_Slides.js"></script>
+    <script src="PopUp_Purchase.js"></script>
+    <script src="Menu_BuyNow_btn.js"></script>
+    <script src="Checkout_Preview.js"></script>
+
+</html>

@@ -1,0 +1,205 @@
+.pop-up-Purchase {
+        border: 1px solid rgb(155, 114, 84);
+        position: fixed;
+        width: 400px;
+        height: 80%;
+        background-color: rgba(97, 56, 18, 0.9);
+        z-index: 1;
+        margin: 1% auto;
+        right: 0;
+        left: 0;
+        /* left: -15%; */
+        opacity: 0;
+        visibility: hidden;
+        transition: 1s;
+
+}
+
+.popUp-header {
+        border: px solid red;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.popUp-header p {
+        color: white;
+        font-size: 20px;
+        font-family: 'Zilla Slab';
+        margin-left: 7%;
+
+}
+
+.popUp-header a {
+        color: white;
+        position: absolute;
+        top: 1%;
+        right: 1%;
+}
+
+.order-selection {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        margin-bottom: 3%;
+
+}
+
+.order-code {
+        border: px solid white;
+        width: 15%;
+        height: 100%;
+        
+}
+
+.order-code select {
+        display: block;
+        height: 20%;
+        margin: auto;
+        margin-top: 40%;
+}
+
+.orderName-orderSize {
+        border: 1px solid white;
+        width: 55%;
+        height: 100%;
+}
+
+.orderName {
+        border-bottom: 1px solid white;
+        display: block;
+        width: 95%;
+        margin: auto;
+        margin-top: 10%;
+        height: 30%;
+        color: white;
+        text-align: center;
+        
+}
+
+.orderSize-container {
+        border: px solid white;
+        width: 100%;
+        height: 10%;
+        margin-top: 5%;
+}
+
+.orderSize {
+        margin-left: 10%;
+}
+
+.order-size {
+        color: white;
+        font-family: 'Arimo';
+        font-size: 10px;
+        margin-right: 6%;
+}
+
+.orderImage-Quantity {
+        border: px solid white;
+        width: 30%;
+        height: 100%;
+        text-align: center;
+}
+
+#orderImage {
+        border: 1px solid white;
+        width: 70%;
+        height: 70%;
+}
+
+#quantity {
+        width: 30%;
+        text-align: center;
+}
+
+.orderImage-Quantity nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        
+}
+.orderImage-Quantity nav input {
+        width: 20%;
+}
+
+.order-Checkout-Details {
+        width: 70%;
+        height: 52%;
+        margin: auto;
+        padding-top: 2%;
+}
+
+.order-checkout { 
+        width: 90%; 
+        color: white;
+        margin: auto;
+        
+        margin-bottom: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.checkout-Labels {
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+}
+
+.checkout-Cost {
+        border-bottom: 1px solid white;
+        width: 20%;
+        text-align: center;
+}
+
+.checkout-Option {
+        width: 65%;
+        margin-bottom: 2%;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        color: white;
+        background-color: transparent;
+        border-bottom: 1px solid white;
+}
+
+textarea:focus, input:focus, select:focus{
+        outline: none;
+    }
+
+.address {
+        display: block;
+        width: 95%;
+        margin: auto;
+        text-indent: 10px;
+}
+
+.address::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        text-indent: 0px;
+}
+
+.contact {
+        width: 63.2%;
+        text-indent: 10px;
+}
+
+.checkoutPreview-btn {
+        border: none;
+        background-color: transparent;
+        color: white;
+        font-size: 12px;
+        transition: .2s;
+        display: block;
+        margin-left: auto;
+        margin-top: 10%;
+
+
+}
+
+.checkoutPreview-btn:hover {
+        color: rgba(255, 255, 255, 0.5);
+}

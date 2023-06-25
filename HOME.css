@@ -1,0 +1,203 @@
+html {
+    scroll-behavior: smooth;   
+}    
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    background-color: rgba(238, 213, 190, 1);
+}
+
+.randomAds {
+    width: 15%;
+    height: 100vh;
+    background-color: rgb(152, 107, 66);
+    position: fixed;
+    right: 0;
+    color: white;
+    font-size: 30px;
+}
+
+.home-container {
+    width: 100%;
+    height: 100vh;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(97, 56, 18, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.header {
+    border: 1px solid white;
+    text-align: center;
+}
+
+header .shop-name {
+    color: white;
+    font-size: 30px;
+    font-family: 'Flamenco';
+    margin: 0;
+}
+
+#sideNavBar_open {
+    transition: .7s;
+}
+
+#sideNavBar_close {
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.side-nav-bar {
+    color: white;
+    cursor: pointer;
+}
+
+
+/* CONTENT */
+
+.body-container {
+    width: 100%;
+    height: 90%;
+    padding-top: 2%;
+    background-color: rgb(152, 107, 66);
+    background-image: url('Resources/IMAGES/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 45%;
+    background-attachment: fixed;
+}
+
+/* MENU - BUY NOW - BUTTON */
+
+.menu {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menu:hover {
+    color: rgba(255, 255, 255, .5);
+}
+
+.buttons-timeBoard-container  {
+    margin: auto;
+    margin: 7% 10% 0% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu-buyNow-buttons {
+    width: 260px;
+}
+
+.btn {
+    display: block;
+    width: 260px;
+    height: 60px;
+    border-radius: 50px;
+    border: 4px solid rgba(255, 255, 255, .5);
+    font-size: 25px;
+    color: white;
+    background-color: rgba(116, 68, 24, 1);
+    font-family: 'Zilla Slab';
+    transition: .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: rgba(255, 255, 255, .5);
+}
+
+.buyNow {
+    margin-top: 10px;
+}
+
+/* TIME BOARD */
+
+.time-board-container {
+    border: 1px solid black;
+    width: 230px;
+    height: 200px;
+    background-color: rgba(116, 68, 24, 1);
+    border: 10px solid rgba(255, 255, 255, .5);
+    border-radius: 25px 0px 25px 0px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'Arimo';
+    
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 30%;
+    background-color: rgba(97, 56, 18, 1);
+    display: flex;
+    align-items: center;
+}
+
+.footer-text {
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    color: white;
+    padding-top: 1%;
+}
+
+.footer-nav {
+    width: 90%;
+    height: 75%;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.footer-nav a {
+    width: 40%;
+    height: 30%;
+    display: inline-flex;
+    font-size: 15px;
+    color: white;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    opacity: .5;
+}
+
+.footer-image {
+    width: 40%;
+    height: 100%;
+    background-image: url('Resources/IMAGES/footer.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+}
+
+
+
+
+
+
